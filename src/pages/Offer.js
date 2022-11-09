@@ -1,4 +1,5 @@
+import Header from "../components/Header";
 const Offer = () => {
-  return <p>Offer component</p>;
+  return <Header />;
 };
 export default Offer;

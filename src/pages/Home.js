@@ -10,7 +10,7 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://lereacteur-vinted-api.herokuapp.com/offers?page=1&limit=10"
+          "https://lereacteur-vinted-api.herokuapp.com/offers?page=1&limit=30"
         );
         // console.log(response.data);
         setData(response.data);
@@ -32,21 +32,26 @@ const Home = () => {
       <div className="banner"></div>
       <section className="container offers-section">
         {data.offers.map((elem) => {
-          //console.log(elem);
+          //console.log(elem._id);
+          const id = elem._id;
           return (
-            <div className="offers-container" key={elem._id}>
-              {elem.owner && <p>{elem.owner.account.username}</p>}
+            <Link to={`/offers/${id}`}>
+              <div className="offers-container" key={id}>
+                {elem.owner ? (
+                  <p>{elem.owner.account.username}</p>
+                ) : (
+                  <p className="empty-div"></p>
+                )}
 
-              <img src={elem.product_image.secure_url} alt="phot" />
-              <p>{elem.product_price} €</p>
-              <p>{elem.product_details[1].TAILLE}</p>
-              <p>{elem.product_details[0].MARQUE}</p>
-            </div>
+                <img src={elem.product_image.secure_url} alt="phot" />
+                <p>{elem.product_price} €</p>
+                <p>{elem.product_details[1].TAILLE}</p>
+                <p>{elem.product_details[0].MARQUE}</p>
+              </div>
+            </Link>
           );
         })}
       </section>
-
-      <Link to={"/offers"}>Go to offers</Link>
     </>
   );
 };

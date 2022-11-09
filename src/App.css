@@ -36,7 +36,10 @@ header img {
   flex-wrap: wrap;
 }
 .offers-section img {
-  width: 200px;
+  width: 220px;
   height: 290px;
   object-fit: cover;
+}
+.empty-div {
+  padding: 8px;
 }
