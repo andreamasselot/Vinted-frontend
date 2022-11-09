@@ -29,3 +29,14 @@ header img {
   background-position: center;
   height: 40vh;
 }
+.offers-section {
+  display: flex;
+  margin-top: 50px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.offers-section img {
+  width: 200px;
+  height: 290px;
+  object-fit: cover;
+}
