@@ -1,0 +1,31 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+header {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+header img {
+  width: 100px;
+  padding: 5px;
+}
+.button-1 {
+  display: flex;
+
+  gap: 20px;
+}
+.button-2 {
+  margin-left: 40px;
+}
+.banner {
+  background-image: url(./assets/img/banner-wide-96cebf41372b8de2d64b7e609f0fb2d3c3084f8df0f861fa8b3782231e5c31f8.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+}
