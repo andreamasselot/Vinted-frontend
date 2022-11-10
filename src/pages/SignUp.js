@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 import Cookies from "js-cookie";
 import Header from "../components/Header";
 const SignUp = () => {
@@ -19,9 +20,20 @@ const SignUp = () => {
     const value = event.target.value;
     setPassword(value);
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(username, email, password);
+    const response = await axios.post(
+      "https://lereacteur-vinted-api.herokuapp.com/user/signup",
+      {
+        email: email,
+        username: username,
+        password: password,
+        newsletter: isChecked,
+      }
+    );
+    console.log(response.data);
+
+    Cookies.set("token", response.data.token, { expires: 7 });
   };
   const handleChecked = (event) => {
     const value = event.target.checked;
