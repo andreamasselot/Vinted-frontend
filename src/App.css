@@ -1,3 +1,6 @@
+#root {
+  font-family: "Bw Modelica", sans-serif;
+}
 .container {
   max-width: 1200px;
   margin: auto;
@@ -5,6 +8,9 @@
 a {
   text-decoration: none;
   color: black;
+}
+p {
+  line-height: 150%;
 }
 header {
   display: flex;
@@ -15,13 +21,23 @@ header img {
   width: 100px;
   padding: 5px;
 }
+button {
+  background-color: white;
+  color: #15b3bc;
+  border: solid 1px #15b3bc;
+  border-radius: 5px;
+  height: 70%;
+  cursor: pointer;
+}
 .button-1 {
   display: flex;
-
+  align-items: center;
   gap: 20px;
 }
 .button-2 {
   margin-left: 40px;
+  background-color: #15b3bc;
+  color: white;
 }
 .banner {
   background-image: url(./assets/img/banner-wide-96cebf41372b8de2d64b7e609f0fb2d3c3084f8df0f861fa8b3782231e5c31f8.jpg);
@@ -41,5 +57,52 @@ header img {
   object-fit: cover;
 }
 .empty-div {
-  padding: 8px;
+  height: 35px;
+}
+.users {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 5px;
+}
+.offers-section .avatars {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+}
+.body {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  height: 100vh;
+  background-color: #ebedee;
+}
+.product-infos {
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+  background-color: white;
+  padding: 20px;
+}
+.string {
+  border-bottom: grey 1px solid;
+}
+.avatars {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+}
+.image-container {
+  width: 440px;
+}
+.image-container img {
+  width: 100%;
+}
+.card {
+  display: flex;
+  gap: 100px;
+  margin-top: 100px;
+  height: 45%;
 }

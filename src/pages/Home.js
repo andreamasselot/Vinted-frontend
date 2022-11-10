@@ -38,7 +38,14 @@ const Home = () => {
             <Link to={`/offers/${id}`}>
               <div className="offers-container" key={id}>
                 {elem.owner ? (
-                  <p>{elem.owner.account.username}</p>
+                  <div className="users">
+                    <img
+                      className="avatars"
+                      src={elem.owner.account.avatar.secure_url}
+                      alt="avatar"
+                    />
+                    <p> {elem.owner.account.username}</p>
+                  </div>
                 ) : (
                   <p className="empty-div"></p>
                 )}
