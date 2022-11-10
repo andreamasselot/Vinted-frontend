@@ -23,7 +23,7 @@ const Offer = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [id]);
 
   return isLoading ? (
     <p>Loading...</p>
@@ -38,11 +38,7 @@ const Offer = () => {
               <img src={data.product_image.secure_url} alt="vetement" />
             </div>
             <div className="product-infos">
-              <p>
-                {" "}
-                <span></span>
-                {data.product_price}
-              </p>
+              <p>{data.product_price}</p>
               <p>
                 <span>MARQUE </span>
                 {data.product_details[0].MARQUE}
