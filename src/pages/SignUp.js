@@ -2,6 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
+
 const SignUp = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -32,7 +34,6 @@ const SignUp = () => {
       }
     );
     console.log(response.data);
-
     Cookies.set("token", response.data.token, { expires: 7 });
   };
   const handleChecked = (event) => {
@@ -85,7 +86,7 @@ const SignUp = () => {
             harum fuga maxime.
           </p>
           <input type="submit" value="S'inscrire" name="Signup" />
-          <a href="http://google.com">Tu as déjà un compte ? Connecte toi !</a>
+          <Link to={"/login"}>Tu as déjà un compte ? Connecte toi !</Link>
         </form>
       </div>
     </>
