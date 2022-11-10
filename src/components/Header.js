@@ -1,4 +1,5 @@
 import logo from "../assets/img/vintedlogo.png";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
@@ -6,8 +7,8 @@ const Header = () => {
         <img src={logo} alt="logo" />
 
         <div className="button-1">
-          <button>S'inscrire</button>
-          <button>Se connecter</button>
+          <Link to={"/signup"}>S'inscrire</Link>
+          <Link to={"/login"}>Se connecter</Link>
           <button className="button-2">Vends tes articles</button>
         </div>
       </header>
