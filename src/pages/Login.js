@@ -1,6 +1,8 @@
+import axios from "axios";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Cookies from "js-cookie";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -15,6 +17,7 @@ const Login = () => {
     setPassword(value);
   };
   const handleSubmit = async (event) => {
+    event.preventDefault();
     const response = await axios.post(
       "https://lereacteur-vinted-api.herokuapp.com/user/login",
       {
@@ -24,6 +27,7 @@ const Login = () => {
     );
 
     console.log(response.data);
+    Cookies.set("token", response.data.token, { expires: 7 });
   };
   return (
     <>
@@ -40,12 +44,14 @@ const Login = () => {
             name="email"
             placeholder="Email"
             value={email}
+            onChange={handleEmailChange}
           />
           <input
             className="input-form"
             type="password"
             name="password"
             placeholder="Mot de passe"
+            onChange={handlePasswordChange}
           />
           <input type="submit" name="login" value="Se connecter" />
           <Link to={"/signup"}>Pas encore de compte ? Inscris toi ici</Link>
