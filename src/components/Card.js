@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const Card = (props) => {
   return (
-    <Link to={`/offers/${props.id}`}>
-      <div className="offers-container" key={props.id}>
+    <Link to={`/offers/${props.elem._id}`}>
+      <div className="offers-container">
         {props.elem.owner ? (
           <div className="users">
             <img

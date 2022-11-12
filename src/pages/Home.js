@@ -29,7 +29,7 @@ const Home = () => {
       <section className="container offers-section">
         {data.offers.map((elem) => {
           const id = elem._id;
-          return <Card id={elem._id} elem={elem} key={id} />;
+          return <Card elem={elem} key={id} />;
         })}
       </section>
     </>
