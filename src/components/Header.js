@@ -21,7 +21,7 @@ const Header = (props) => {
                 Se déconnecter
               </button>
             ) : (
-              <div>
+              <div className="login-buttons">
                 <Link to={"/signup"}>S'inscrire</Link>
                 <Link to={"/login"}>Se connecter</Link>
               </div>

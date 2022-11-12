@@ -47,7 +47,12 @@ const Login = (props) => {
             placeholder="Mot de passe"
             onChange={handlePasswordChange}
           />
-          <input type="submit" name="login" value="Se connecter" />
+          <input
+            className="blue"
+            type="submit"
+            name="login"
+            value="Se connecter"
+          />
           <Link to={"/signup"}>Pas encore de compte ? Inscris toi ici</Link>
         </form>
       </div>

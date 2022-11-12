@@ -69,6 +69,7 @@ const SignUp = (props) => {
           />
           <span>
             <input
+              className="checkbox"
               type="checkbox"
               name="subscribe"
               checked={isChecked}
@@ -77,10 +78,16 @@ const SignUp = (props) => {
             <label For="subscribe">S'inscrire à notre newsletter</label>
           </span>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
-            harum fuga maxime.
+            En m'inscrivant je confirme avoir lu et accepté les Termes &
+            Conditions et Politique de Confidentialité de Vinted. Je confirme
+            avoir au moins 18 ans.
           </p>
-          <input type="submit" value="S'inscrire" name="Signup" />
+          <input
+            className="blue"
+            type="submit"
+            value="S'inscrire"
+            name="Signup"
+          />
           <Link to={"/login"}>Tu as déjà un compte ? Connecte toi !</Link>
         </form>
       </div>

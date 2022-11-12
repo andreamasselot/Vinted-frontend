@@ -29,11 +29,7 @@ button {
   height: 70%;
   cursor: pointer;
 }
-.button-1 {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
+
 .button-2 {
   margin-left: 40px;
   background-color: #15b3bc;
@@ -141,6 +137,76 @@ form input {
   padding: 10px;
   border: none;
 }
+form p {
+  color: #999999;
+  font-size: 12px;
+}
+form a {
+  color: #15b3bc;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+}
+form span {
+  display: flex;
+  gap: 15px;
+  color: #999999;
+  padding: 5px;
+}
+.blue {
+  background-color: #15b3bc;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.checkbox {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  cursor: pointer;
+}
+.checkbox:hover {
+  color: black;
+}
 .input-form {
   border-bottom: 1px solid lightpink;
+}
+.deco {
+  background-color: #c2175b;
+  color: white;
+  border: none;
+}
+.button-1 {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  width: 50%;
+  justify-content: flex-end;
+}
+.button-1 a {
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #15b3bc;
+  color: #15b3bc;
+  padding: 9px;
+}
+.login-buttons {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+h1 {
+  font-size: 21px;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .button-1 {
+    width: 100%;
+  }
+  .login-buttons {
+    gap: 5px;
+  }
+  .button-2 {
+    margin-left: 10px;
+  }
 }
