@@ -11,30 +11,34 @@ const Header = () => {
   }, []);
   return (
     <>
-      <header>
-        <img src={logo} alt="logo" />
+      <section className="container">
+        <header>
+          <Link to={"/"}>
+            <img src={logo} alt="logo" />
+          </Link>
 
-        <div className="button-1">
-          {token ? (
-            <button
-              className="deco"
-              onClick={() => {
-                Cookies.remove("token");
-                setToken("");
-              }}
-            >
-              Se déconnecter
-            </button>
-          ) : (
-            <div>
-              <Link to={"/signup"}>S'inscrire</Link>
-              <Link to={"/login"}>Se connecter</Link>
-            </div>
-          )}
+          <div className="button-1">
+            {token ? (
+              <button
+                className="deco"
+                onClick={() => {
+                  Cookies.remove("token");
+                  setToken("");
+                }}
+              >
+                Se déconnecter
+              </button>
+            ) : (
+              <div>
+                <Link to={"/signup"}>S'inscrire</Link>
+                <Link to={"/login"}>Se connecter</Link>
+              </div>
+            )}
 
-          <button className="button-2">Vends tes articles</button>
-        </div>
-      </header>
+            <button className="button-2">Vends tes articles</button>
+          </div>
+        </header>
+      </section>
     </>
   );
 };

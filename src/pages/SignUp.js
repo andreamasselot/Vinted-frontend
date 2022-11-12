@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
-import Header from "../components/Header";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
@@ -43,9 +42,6 @@ const SignUp = () => {
 
   return (
     <>
-      <div className="container">
-        <Header />
-      </div>
       <div className="form-container">
         <h1>S'inscrire</h1>
         <form onSubmit={handleSubmit}>

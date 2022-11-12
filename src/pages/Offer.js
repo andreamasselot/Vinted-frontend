@@ -2,8 +2,6 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-import Header from "../components/Header";
-
 const Offer = () => {
   const { id } = useParams();
   const [data, setData] = useState();
@@ -29,54 +27,46 @@ const Offer = () => {
     <p>Loading...</p>
   ) : (
     <>
-      <section className="container">
-        <Header />
-
-        <div className="body">
+      <div className="background">
+        <div className="offer-container">
+          <div className="image-container">
+            <img src={data.product_image.secure_url} alt="vetement" />
+          </div>
           <div className="card">
-            <div className="image-container">
-              <img src={data.product_image.secure_url} alt="vetement" />
-            </div>
-            <div className="product-infos">
-              <p>{data.product_price}</p>
-              <p>
-                <span>MARQUE </span>
-                {data.product_details[0].MARQUE}
-              </p>
-              <p>
-                <span>TAILLE </span>
-                {data.product_details[1].TAILLE}
-              </p>
-              <p>
-                <span>ÉTAT </span>
-                {data.product_details[2].ETAT}
-              </p>
-              <p>
-                <span>COULEUR </span>
-                {data.product_details[3].COULEUR}
-              </p>
-              <p>
-                <span>EMPLACEMENT </span>
-                {data.product_details[4].EMPLACEMENT}
-              </p>
+            <div className="card-container">
+              {data.product_details.map((elem, index) => {
+                const objectKey = Object.keys(elem)[0];
+                return (
+                  <>
+                    <div className="card-infos" key={index}>
+                      <p>{objectKey}</p>
+
+                      <p>{elem[objectKey]}</p>
+                    </div>
+                  </>
+                );
+              })}
               <div className="string"></div>
               <div>
-                <h2>{data.product_name}</h2>
+                <p>{data.product_name}</p>
                 <p>{data.product_description}</p>
-                <div className="users">
-                  <img
-                    className="avatars"
-                    src={data.owner.account.avatar.secure_url}
-                    alt="avatar"
-                  />
-                  <p>{data.owner.account.username}</p>
-                </div>
-                <button>Acheter</button>
               </div>
             </div>
+            {data.owner ? (
+              <div className="users">
+                <img
+                  className="avatars"
+                  src={data.owner.account.avatar.secure_url}
+                  alt="vetements"
+                />
+                <p> {data.owner.account.username}</p>
+              </div>
+            ) : (
+              <div className="empty-div"></div>
+            )}
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };

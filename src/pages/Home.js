@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import Header from "../components/Header";
 const Home = () => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -26,9 +25,6 @@ const Home = () => {
     <p>Loading...</p>
   ) : (
     <>
-      <section className="container">
-        <Header />
-      </section>
       <div className="banner"></div>
       <section className="container offers-section">
         {data.offers.map((elem) => {

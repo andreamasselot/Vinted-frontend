@@ -1,5 +1,4 @@
 import axios from "axios";
-import Header from "../components/Header";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Cookies from "js-cookie";
@@ -31,10 +30,6 @@ const Login = () => {
   };
   return (
     <>
-      <div className="container">
-        <Header />
-      </div>
-
       <div className="form-container">
         <h1>Se connecter</h1>
         <form onSubmit={handleSubmit}>
