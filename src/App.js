@@ -6,16 +6,30 @@ import Offer from "./pages/Offer";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Header from "./components/Header";
+import { useState } from "react";
+import Cookies from "js-cookie";
 function App() {
+  const [token, setToken] = useState(Cookies.get("token") || null);
+
+  const handleToken = (token) => {
+    if (token) {
+      setToken(token);
+      Cookies.set("token", token, { expires: 7 });
+    } else {
+      setToken(null);
+      Cookies.remove("token");
+    }
+  };
+
   return (
     <Router>
-      <Header />
+      <Header token={token} handleToken={handleToken} />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/offers/:id" element={<Offer />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp handleToken={handleToken} />} />
+        <Route path="/login" element={<Login handleToken={handleToken} />} />
       </Routes>
     </Router>
   );

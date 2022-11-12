@@ -1,14 +1,7 @@
 import logo from "../assets/img/vintedlogo.png";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import Cookies from "js-cookie";
-const Header = () => {
-  const [token, setToken] = useState("");
 
-  useEffect(() => {
-    const newToken = Cookies.get("token");
-    setToken(newToken);
-  }, []);
+const Header = (props) => {
   return (
     <>
       <section className="container">
@@ -18,12 +11,11 @@ const Header = () => {
           </Link>
 
           <div className="button-1">
-            {token ? (
+            {props.token ? (
               <button
                 className="deco"
                 onClick={() => {
-                  Cookies.remove("token");
-                  setToken("");
+                  props.handleToken();
                 }}
               >
                 Se déconnecter
