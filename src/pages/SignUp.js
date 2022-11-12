@@ -1,9 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
-import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
 
-const SignUp = () => {
+const SignUp = (props) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -33,7 +32,7 @@ const SignUp = () => {
       }
     );
     console.log(response.data);
-    Cookies.set("token", response.data.token, { expires: 7 });
+    props.handleToken(response.data.token);
   };
   const handleChecked = (event) => {
     const value = event.target.checked;
