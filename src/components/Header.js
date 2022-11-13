@@ -1,6 +1,6 @@
 import logo from "../assets/img/vintedlogo.png";
 import { Link } from "react-router-dom";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Header = (props) => {
   return (
     <>
@@ -9,6 +9,16 @@ const Header = (props) => {
           <Link to={"/"}>
             <img src={logo} alt="logo" />
           </Link>
+          <div className="research">
+            <input
+              type="text"
+              name="search"
+              placeholder="Recherche des articles"
+            />{" "}
+            <p className="research-icon">
+              <FontAwesomeIcon icon="magnifying-glass" />
+            </p>
+          </div>
 
           <div className="button-1">
             {props.token ? (

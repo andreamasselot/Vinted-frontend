@@ -1,13 +1,18 @@
 import "./assets/fonts/stylesheet.css";
 import "./App.css";
+import { useState } from "react";
+import Cookies from "js-cookie";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Offer from "./pages/Offer";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Header from "./components/Header";
-import { useState } from "react";
-import Cookies from "js-cookie";
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+library.add(faMagnifyingGlass);
+
 function App() {
   const [token, setToken] = useState(Cookies.get("token") || null);
 

@@ -16,11 +16,24 @@ header {
   display: flex;
   padding: 10px;
   justify-content: space-between;
+  align-items: center;
 }
 header img {
   width: 100px;
   padding: 5px;
 }
+header input {
+  background-color: #ebedee;
+  border: none;
+  border-radius: 5px;
+  font-family: "BW Modelica";
+  padding: 10px 10px 10px 50px;
+  width: 100%;
+  font-size: 16px;
+  color: #999999;
+  margin-left: 50px;
+}
+
 button {
   background-color: white;
   color: #15b3bc;
@@ -28,6 +41,18 @@ button {
   border-radius: 5px;
   height: 70%;
   cursor: pointer;
+  padding: 10px;
+}
+.research {
+  position: relative;
+  width: 400px;
+}
+.research-icon {
+  position: absolute;
+  top: 3px;
+  left: 65px;
+  color: #999999;
+  font-size: 20px;
 }
 
 .button-2 {
