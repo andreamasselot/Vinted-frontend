@@ -40,7 +40,9 @@ const Header = (props) => {
               </div>
             )}
 
-            <button className="button-2">Vends tes articles</button>
+            <Link to={"/offer/publish"} className="button-2">
+              Vends tes articles
+            </Link>
           </div>
         </header>
       </section>
