@@ -1,12 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = (props) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isChecked, setIsChecked] = useState(false);
+  const navigate = useNavigate();
 
   const handleUsernameChange = (event) => {
     const value = event.target.value;
@@ -23,7 +24,8 @@ const SignUp = (props) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const response = await axios.post(
-      "https://lereacteur-vinted-api.herokuapp.com/user/signup",
+      "https://site--vinted-backend--fhdp7f7ffy5p.code.run/user/signup",
+
       {
         email: email,
         username: username,
@@ -33,6 +35,7 @@ const SignUp = (props) => {
     );
     console.log(response.data);
     props.handleToken(response.data.token);
+    navigate("/");
   };
   const handleChecked = (event) => {
     const value = event.target.checked;

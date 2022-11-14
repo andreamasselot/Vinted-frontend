@@ -15,7 +15,7 @@ library.add(faMagnifyingGlass);
 
 function App() {
   const [token, setToken] = useState(Cookies.get("token") || null);
-
+  const [search, setSearch] = useState("");
   const handleToken = (token) => {
     if (token) {
       setToken(token);
@@ -28,7 +28,12 @@ function App() {
 
   return (
     <Router>
-      <Header token={token} handleToken={handleToken} />
+      <Header
+        token={token}
+        handleToken={handleToken}
+        search={search}
+        setSearch={setSearch}
+      />
 
       <Routes>
         <Route path="/" element={<Home />} />

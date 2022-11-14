@@ -46,6 +46,7 @@ button {
   height: 70%;
   cursor: pointer;
   padding: 10px;
+  font-family: "Bw Modelica";
 }
 .research {
   position: relative;
@@ -74,6 +75,8 @@ button {
 .banner img {
   position: absolute;
   bottom: 0px;
+  right: 0px;
+  width: 50%;
 }
 .offers-section {
   display: flex;
@@ -242,5 +245,9 @@ h1 {
   }
   .button-2 {
     margin-left: 10px;
+  }
+  header input {
+    width: 50px;
+    overflow-y: hidden;
   }
 }

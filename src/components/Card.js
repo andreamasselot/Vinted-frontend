@@ -6,11 +6,14 @@ const Card = (props) => {
       <div className="offers-container">
         {props.elem.owner ? (
           <div className="users">
-            <img
-              className="avatars"
-              src={props.elem.owner.account.avatar.secure_url}
-              alt="avatar"
-            />
+            {props.elem.owner.account.avatar && (
+              <img
+                className="avatars"
+                src={props.elem.owner.account.avatar.secure_url}
+                alt="avatar"
+              />
+            )}
+
             <p> {props.elem.owner.account.username}</p>
           </div>
         ) : (

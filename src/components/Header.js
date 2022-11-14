@@ -1,6 +1,7 @@
 import logo from "../assets/img/vintedlogo.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Range } from "react-range";
 const Header = (props) => {
   return (
     <>
@@ -14,7 +15,9 @@ const Header = (props) => {
               type="text"
               name="search"
               placeholder="Recherche des articles"
-            />{" "}
+              value={props.search}
+              //onChange={event.target.value}
+            />
             <p className="research-icon">
               <FontAwesomeIcon icon="magnifying-glass" />
             </p>

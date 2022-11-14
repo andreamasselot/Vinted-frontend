@@ -11,7 +11,8 @@ const Offer = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://lereacteur-vinted-api.herokuapp.com/offer/${id}/`
+          //`https://lereacteur-vinted-api.herokuapp.com/offer/${id}/`
+          `https://site--vinted-backend--fhdp7f7ffy5p.code.run/offer/${id}`
         );
         // console.log(response.data);
         setData(response.data);
@@ -54,11 +55,14 @@ const Offer = () => {
             </div>
             {data.owner ? (
               <div className="users">
-                <img
-                  className="avatars"
-                  src={data.owner.account.avatar.secure_url}
-                  alt="vetements"
-                />
+                {data.owner.account.avatar && (
+                  <img
+                    className="avatars"
+                    src={data.owner.account.avatar.secure_url}
+                    alt="vetements"
+                  />
+                )}
+
                 <p> {data.owner.account.username}</p>
               </div>
             ) : (
