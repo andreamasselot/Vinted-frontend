@@ -1,7 +1,7 @@
 import logo from "../assets/img/vintedlogo.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Range } from "react-range";
+//import { Range } from "react-range";
 const Header = (props) => {
   return (
     <>
