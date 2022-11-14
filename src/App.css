@@ -5,12 +5,21 @@
   max-width: 1200px;
   margin: auto;
 }
+.grey {
+  color: #999999;
+}
+.bold {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
 a {
   text-decoration: none;
   color: black;
 }
 p {
   line-height: 150%;
+  font-size: 14px;
 }
 header {
   display: flex;
@@ -128,6 +137,7 @@ button {
   align-items: center;
   gap: 20px;
   margin-bottom: 5px;
+  margin-top: 20px;
 }
 .offers-section .avatars {
   width: 30px;
@@ -156,7 +166,7 @@ button {
 }
 .card {
   background-color: white;
-  padding: 20px;
+  padding: 40px;
   width: 40%;
 }
 .card-infos {

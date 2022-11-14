@@ -5,7 +5,7 @@ const Card = (props) => {
     <Link to={`/offers/${props.elem._id}`}>
       <div className="offers-container">
         {props.elem.owner ? (
-          <div className="users">
+          <div className="users grey">
             {props.elem.owner.account.avatar && (
               <img
                 className="avatars"
@@ -22,8 +22,8 @@ const Card = (props) => {
 
         <img src={props.elem.product_image.secure_url} alt="phot" />
         <p>{props.elem.product_price} €</p>
-        <p>{props.elem.product_details[1].TAILLE}</p>
-        <p>{props.elem.product_details[0].MARQUE}</p>
+        <p className="grey">{props.elem.product_details[1].TAILLE}</p>
+        <p className="grey">{props.elem.product_details[0].MARQUE}</p>
       </div>
     </Link>
   );

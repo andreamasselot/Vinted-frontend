@@ -11,7 +11,6 @@ const Offer = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          //`https://lereacteur-vinted-api.herokuapp.com/offer/${id}/`
           `https://site--vinted-backend--fhdp7f7ffy5p.code.run/offer/${id}`
         );
         // console.log(response.data);
@@ -40,7 +39,7 @@ const Offer = () => {
                 return (
                   <>
                     <div className="card-infos" key={index}>
-                      <p>{objectKey}</p>
+                      <p className="grey">{objectKey}</p>
 
                       <p>{elem[objectKey]}</p>
                     </div>
@@ -49,8 +48,8 @@ const Offer = () => {
               })}
               <div className="string"></div>
               <div>
-                <p>{data.product_name}</p>
-                <p>{data.product_description}</p>
+                <p className="bold">{data.product_name}</p>
+                <p className="grey">{data.product_description}</p>
               </div>
             </div>
             {data.owner ? (
