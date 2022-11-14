@@ -61,9 +61,13 @@ button {
 }
 
 .button-2 {
-  margin-left: 40px;
+  margin-left: 20px;
   background-color: #15b3bc;
   color: white;
+  padding: 10px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 150px;
 }
 .banner {
   background-image: url(./assets/img/banner-wide-96cebf41372b8de2d64b7e609f0fb2d3c3084f8df0f861fa8b3782231e5c31f8.jpg);
@@ -77,6 +81,33 @@ button {
   bottom: 0px;
   right: 0px;
   width: 50%;
+}
+.banner-content {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 25px 20px;
+  border-radius: 5px;
+}
+.banner-content h2 {
+  font-size: 34px;
+  margin: 10px 0px;
+  line-height: 120%;
+}
+.banner-content a {
+  background-color: #15b3bc;
+  color: white;
+  border-radius: 5px;
+  padding: 20px 10px;
+  width: 190px;
+  margin: 20px 0px;
+  font-size: 16px;
+}
+.banner-flex {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 .offers-section {
   display: flex;

@@ -39,11 +39,10 @@ const Header = (props) => {
                 <Link to={"/login"}>Se connecter</Link>
               </div>
             )}
-
-            <Link to={"/offer/publish"} className="button-2">
-              Vends tes articles
-            </Link>
           </div>
+          <Link to={"/offer/publish"} className="button-2">
+            Vends tes articles
+          </Link>
         </header>
       </section>
     </>
