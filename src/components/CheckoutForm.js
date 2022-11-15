@@ -31,7 +31,7 @@ const CheckoutForm = (props) => {
     <>
       <form onSubmit={handleSubmit}>
         <CardElement />
-        <input type="submit" value="Acheter" />
+        <input className="pay-button" type="submit" value="Pay" />
       </form>
     </>
   );

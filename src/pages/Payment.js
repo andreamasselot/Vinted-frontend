@@ -19,39 +19,49 @@ const Payment = () => {
   const shipping = 1.18;
   const total = location.state.price + fees + shipping;
   return (
-    <>
-      <div>
-        <h1>Résumé de la commande</h1>
-        <div>
-          <p>Commande</p> <p>{location.state.price} €</p>
+    <div className="background-3">
+      <div className="container white">
+        <div className="topsection-payment">
+          <h1>Résumé de la commande</h1>
+          <div className="prices-fees">
+            <p>Commande</p> <p>{location.state.price} €</p>
+          </div>
+          <div className="prices-fees">
+            <p>Frais protection acheteurs</p> <p>{fees} €</p>
+          </div>
+          <div className="prices-fees">
+            <p>Frais de port</p> <p>{shipping} €</p>
+          </div>
         </div>
-        <div>
-          <p>Frais protection acheteurs</p> <p>{fees} €</p>
+        <div className="prices-fees bottomsection-payment">
+          <h2>
+            <span>Total</span>
+          </h2>
+          <p>
+            <span> {total} €</span>
+          </p>
         </div>
-        <div>
-          <p>Frais de port</p> <p>{shipping} €</p>
+        <div className="bottomsection-payment">
+          <p className="conclusion">
+            Il ne vous reste plus qu'un étape pour vous offrir{" "}
+            <span>{location.state.title}.</span> Vous allez payer{" "}
+            <span>{total} €</span> (frais de protection et frais de port
+            inclus).
+          </p>
+          {completed ? (
+            <p>Merci pour votre achat.</p>
+          ) : (
+            <Elements className="element" stripe={stripePromise}>
+              <CheckoutForm
+                title={location.state.title}
+                price={total}
+                state={setCompleted}
+              />
+            </Elements>
+          )}
         </div>
       </div>
-      <div>
-        <h2>Total</h2> <p>{total} €</p>
-      </div>
-      <p>
-        Il ne vous reste plus qu'un étape pour vous offrir{" "}
-        {location.state.title}. Vous allez payer {total} € (frais de protection
-        et frais de port inclus).
-      </p>
-      {completed ? (
-        <p>Merci pour votre achat.</p>
-      ) : (
-        <Elements stripe={stripePromise}>
-          <CheckoutForm
-            title={location.state.title}
-            price={total}
-            state={setCompleted}
-          />
-        </Elements>
-      )}
-    </>
+    </div>
   );
 };
 export default Payment;
