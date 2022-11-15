@@ -90,11 +90,18 @@ const Publish = (props) => {
     <>
       {!props.token && <Navigate to={"/login"} />}
       <section className="background-2">
+        {" "}
+        <h1>Vends ton article</h1>
         <div className="publish-offer-container">
-          <h1>Vends ton article</h1>
           <form onSubmit={handleSubmit}>
-            <div className="files publish-details">
-              <input type="file" name="file" onChange={handleFileChange} />
+            <div className="files publish-details flex">
+              <label For="file">Ajoute une image</label>
+              <input
+                className="style-files"
+                type="file"
+                name="file"
+                onChange={handleFileChange}
+              />
             </div>
             <div>
               <div className="publish-details">
@@ -109,8 +116,10 @@ const Publish = (props) => {
               </div>
               <div className="publish-details">
                 <h2>Décris ton article</h2>
-                <input
-                  type="text"
+                <textarea
+                  type="textarea"
+                  rows="5"
+                  cols="46"
                   name="description"
                   placeholder="ex: porté quelque fois, taille correctement"
                   value={description}

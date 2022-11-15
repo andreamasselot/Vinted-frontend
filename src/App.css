@@ -78,6 +78,14 @@ button {
   font-size: 14px;
   width: 150px;
 }
+.buy-button {
+  background-color: #15b3bc;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 50px;
+}
 .banner {
   background-image: url(./assets/img/banner-wide-96cebf41372b8de2d64b7e609f0fb2d3c3084f8df0f861fa8b3782231e5c31f8.jpg);
   background-size: cover;
@@ -168,6 +176,9 @@ button {
   background-color: white;
   padding: 40px;
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .card-infos {
   display: flex;
@@ -283,6 +294,7 @@ h1 {
   display: flex;
   justify-content: center;
 }
+
 .publish-offer-container {
   display: flex;
   flex-direction: column;
@@ -306,6 +318,16 @@ h1 {
   justify-content: space-between;
   background-color: white;
   padding: 20px;
+}
+.style-files {
+  padding: 50px;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+}
+.publish-details label {
+  margin-right: 150px;
 }
 .add {
   cursor: pointer;
