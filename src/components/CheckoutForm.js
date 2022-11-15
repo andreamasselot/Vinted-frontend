@@ -20,6 +20,11 @@ const CheckoutForm = (props) => {
           stripeToken,
           title: props.title,
           amount: props.price,
+        },
+        {
+          headers: {
+            authorization: "Bearer " + props.token,
+          },
         }
       );
       props.state(true);
