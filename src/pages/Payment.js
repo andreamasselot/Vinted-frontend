@@ -59,6 +59,7 @@ const Payment = (props) => {
                   title={location.state.title}
                   price={total}
                   state={setCompleted}
+                  token={props.token}
                 />
               </Elements>
             )}
