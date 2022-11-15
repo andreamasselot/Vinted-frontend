@@ -77,6 +77,7 @@ button {
   border-radius: 5px;
   font-size: 14px;
   width: 150px;
+  text-align: center;
 }
 .buy-button {
   background-color: #15b3bc;
@@ -387,19 +388,77 @@ h1 {
   display: flex;
   flex-direction: column;
 }
+.hidden {
+  display: none;
+}
 
-@media only screen and (max-width: 600px) {
-  .button-1 {
-    width: 100%;
-  }
+@media only screen and (max-width: 800px) {
   .login-buttons {
     gap: 5px;
   }
   .button-2 {
     margin-left: 10px;
+    text-align: center;
   }
   header input {
     width: 50px;
     overflow-y: hidden;
   }
+  header {
+    justify-content: space-evenly;
+  }
+  .banner-content {
+    display: none;
+  }
+  .hidden {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .hidden a {
+    background-color: #15b3bc;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 60%;
+    text-align: center;
+  }
+  .offers-section {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  .research {
+    width: auto;
+  }
+  .button-1 {
+    width: 30%;
+  }
+  .offer-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 60px 20px 20px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .card {
+    width: 99%;
+    padding-bottom: 30px;
+  }
+  .background {
+    height: 100%;
+  }
+  .image-container {
+    width: 99%;
+  }
+  .buy-button {
+    margin-top: 0px;
+  }
+}
+@media only screen and (max-width: 500px) {
 }

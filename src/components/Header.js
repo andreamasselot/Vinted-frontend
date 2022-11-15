@@ -10,6 +10,7 @@ const Header = (props) => {
           <Link to={"/"}>
             <img src={logo} alt="logo" />
           </Link>
+
           <div className="research">
             <input
               type="text"

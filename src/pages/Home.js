@@ -36,6 +36,10 @@ const Home = () => {
         </div>
         <img src={image} alt="déchirure" />
       </div>
+      <div className=" hidden">
+        <h2>Prêts à faire du tri dans vos placards ?</h2>
+        <Link to={"/offer/publish"}>Commencer à vendre</Link>
+      </div>
       <section className="container offers-section">
         {data.offers.map((elem) => {
           const id = elem._id;
