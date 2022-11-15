@@ -461,4 +461,14 @@ h1 {
   }
 }
 @media only screen and (max-width: 500px) {
+  .research {
+    display: none;
+  }
+  .button-2 {
+    display: none;
+  }
+  .button-1 {
+    display: flex;
+    width: 90%;
+  }
 }
