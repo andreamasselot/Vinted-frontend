@@ -34,6 +34,7 @@ const Offer = () => {
           </div>
           <div className="card">
             <div className="card-container">
+              <h1>{data.product_price} €</h1>
               {data.product_details.map((elem, index) => {
                 const objectKey = Object.keys(elem)[0];
                 return (
@@ -67,7 +68,11 @@ const Offer = () => {
             ) : (
               <div className="empty-div"></div>
             )}
-            <Link className="buy-button" to="/payment">
+            <Link
+              className="buy-button"
+              to="/payment"
+              state={{ title: data.product_name, price: data.product_price }}
+            >
               Acheter
             </Link>
           </div>
