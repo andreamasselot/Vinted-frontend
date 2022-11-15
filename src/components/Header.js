@@ -8,7 +8,7 @@ const Header = (props) => {
       <section className="container">
         <header>
           <Link to={"/"}>
-            <img src={logo} alt="logo" />
+            <img className="logo" src={logo} alt="logo" />
           </Link>
 
           <div className="research">
