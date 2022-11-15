@@ -158,7 +158,10 @@ button {
 
   border-radius: 50%;
 }
-
+.textarea {
+  border: 1px solid #e7e7e7;
+  opacity: 0.7;
+}
 .avatars {
   width: 50px;
   height: 50px;
@@ -354,9 +357,9 @@ h1 {
 }
 
 .publish-details input {
-  border: 1px solid lightgrey;
   opacity: 0.7;
   width: 50%;
+  border-bottom: 1px solid #e7e7e7;
 }
 .publish-details {
   display: flex;
@@ -364,10 +367,12 @@ h1 {
   justify-content: space-between;
   background-color: white;
   padding: 20px;
+  border-bottom: 1px solid #e7e7e7;
 }
 .style-files {
   padding: 50px;
 }
+
 .prices-fees {
   display: flex;
   justify-content: space-between;

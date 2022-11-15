@@ -117,6 +117,7 @@ const Publish = (props) => {
               <div className="publish-details">
                 <h2>Décris ton article</h2>
                 <textarea
+                  className="textarea"
                   type="textarea"
                   rows="5"
                   cols="46"
@@ -189,6 +190,7 @@ const Publish = (props) => {
                   value={price}
                   onChange={handlePriceChange}
                 />
+
                 <input
                   type="checkbox"
                   name="checkbox"
