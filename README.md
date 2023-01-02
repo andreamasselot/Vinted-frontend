@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# Vinted
+
+This is a replica of Vinted website using React.
+[Netlify Link](https://vinted-am.netlify.app)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
